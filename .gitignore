@@ -1,0 +1,24 @@
+# 环境变量（含密钥，不提交到 git）
+.env
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.pyo
+
+# conda / venv
+envs/
+.venv/
+venv/
+
+# 临时验证文件
+_verify.py
+_check_ssl.py
+
+# IDE
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
