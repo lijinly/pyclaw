@@ -9,15 +9,19 @@ import asyncio
 import os
 import sys
 
+from dotenv import load_dotenv
+
 
 def _setup_path():
     """将项目根目录加入 sys.path"""
     root = os.path.dirname(os.path.abspath(__file__))
     if root not in sys.path:
         sys.path.insert(0, root)
+    return root
 
 
-_setup_path()
+_project_root = _setup_path()
+load_dotenv(os.path.join(_project_root, ".env"))  # 自动加载 .env 文件
 
 from core.agent import Agent
 from core.llm import LLMConfig
